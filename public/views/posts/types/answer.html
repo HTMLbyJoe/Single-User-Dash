@@ -1,1 +1,11 @@
-AN ANSWER POST
+<div class="question">{{ post.question }}</div>
+
+<div class="asking">
+    <a ng-show="post.asking_name != 'Anonymous'" ng-href="{{ post.asking_url }}">
+        <img alt="" ng-src="//api.tumblr.com/v2/blog/{{ post.asking_name }}.tumblr.com/avatar/40">
+    </a>
+
+    <img alt="" ng-show="post.asking_name == 'Anonymous'" ng-src="//assets.tumblr.com/images/anonymous_avatar_40.png">
+</div>
+
+<div class="body" ng-bind-html="post.answer"></div>
