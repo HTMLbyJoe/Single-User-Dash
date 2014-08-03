@@ -1,7 +1,7 @@
 <div class="question">{{ post.question }}</div>
 
 <div class="asking">
-    <a ng-show="post.asking_name != 'Anonymous'" ng-href="{{ post.asking_url }}">
+    <a target="_blank" ng-show="post.asking_name != 'Anonymous'" ng-href="{{ post.asking_url }}">
         <img alt="" ng-src="//api.tumblr.com/v2/blog/{{ post.asking_name }}.tumblr.com/avatar/40">
     </a>
 
