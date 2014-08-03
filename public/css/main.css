@@ -1,0 +1,14 @@
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 19px;
+}
+
+.page-wrap {
+    margin: 0 auto;
+    max-width: 725px;
+}
