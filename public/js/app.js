@@ -12,6 +12,12 @@ app.controller('DashboardCtrl', ['$scope', '$routeParams', 'Blog', function($sco
     });
 }]);
 
+app.filter('trusted', ['$sce', function($sce){
+    return function(text) {
+        return $sce.trustAsHtml(text);
+    };
+}]);
+
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
   $locationProvider.html5Mode(true);
   $routeProvider.when('/:blogName', {templateUrl: '/views/posts/list.html', controller: 'DashboardCtrl'});
