@@ -4,5 +4,6 @@
 <ol class="posts">
     <li ng-repeat="post in posts">
         <a target="_blank" ng-href="{{ post.post_url }}">{{ post.title || 'A ' + post.type + ' post' }}</a>
+        <p>Reblogged from {{ post.reblogged_from_name }}</p>
     </li>
 </ol>

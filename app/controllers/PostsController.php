@@ -8,7 +8,7 @@ class PostsController extends BaseController {
     {
         $client = new Tumblr(Config::get('tumblr.consumer_key'));
 
-        $options = Input::get('options');
+        $options = Input::get();
         $posts = $client->getBlogPosts($blogName, $options);
 
         return Response::json($posts);
