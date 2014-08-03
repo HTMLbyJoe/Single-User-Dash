@@ -1,0 +1,16 @@
+<li ng-repeat="post in posts">
+
+    <div class="header">
+        {{ post.blog_name }} reblogged <a target="_blank" ng-href="{{ post.reblogged_from_url }}">{{ post.reblogged_from_name }}</a>
+        Source: <a target="_blank" ng-href="{{ post.source_url }}">{{ post.source_title }}</a>
+    </div>
+
+    <div class="content">
+        <div ng-include="'/views/posts/types/' + post.type + '.html'"></div>
+    </div>
+
+    <div class="footer">
+        <a target="_blank" ng-href="{{ post.post_url }}#notes">{{ post.note_count | number }} notes</a>
+        <a target="_blank" ng-href="http://tumblr.com/reblog/{{ post.id }}/{{ post.reblog_key }}?redirect_to=%2Fdashboard">reblog</a>
+    </div>
+</li>
