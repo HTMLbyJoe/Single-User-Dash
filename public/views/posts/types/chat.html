@@ -1,1 +1,6 @@
-A CHAT POST
+<div class="title" ng-show="post.title">{{ post.title }}</div>
+
+<div class="line" ng-repeat="line in post.dialogue">
+    <span class="label">{{ line.label }}</span>
+    <span class="phrase">{{ line.phrase }}</span>
+</div>
