@@ -6,7 +6,10 @@ app.controller('DashboardCtrl', ['$scope', '$routeParams', 'Blog', function($sco
     var blogName = $routeParams.blogName;
     $scope.blogName = blogName;
 
-    $scope.posts = Blog.query({blogName: blogName});
+    Blog.query({blogName: blogName}, function(response){
+        $scope.posts = response.posts;
+        $scope.blog  = response.blog;
+    });
 }]);
 
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {

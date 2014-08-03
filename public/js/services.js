@@ -3,6 +3,6 @@ var singleUserDashServices = angular.module('singleUserDash.services', ['ngResou
 singleUserDashServices.factory('Blog', ['$resource',
 function($resource){
     return $resource('/blog/:blogName/posts', {}, {
-        query: {method: 'GET', params: {blogName: 'htmlbyjoe'}, isArray: true}
+        query: {method: 'GET', params: {blogName: 'htmlbyjoe'}}
     });
 }]);
