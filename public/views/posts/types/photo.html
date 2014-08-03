@@ -1,1 +1,5 @@
-A PHOTO POST
+<div class="photos">
+    <img class="photo" alt="" ng-repeat="photo in post.photos" ng-src="{{ photo.original_size.url }}">
+</div>
+
+<div class="caption" ng-bind-html="post.caption"></div>

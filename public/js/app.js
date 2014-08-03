@@ -1,4 +1,4 @@
-var app = angular.module('singleUserDash', ['ngRoute', 'ngResource', 'singleUserDash.services']);
+var app = angular.module('singleUserDash', ['ngRoute', 'ngResource', 'ngSanitize', 'singleUserDash.services']);
 
 app.controller('DashboardCtrl', ['$scope', '$routeParams', 'Blog', function($scope, $routeParams, Blog){
     var dash = this;
