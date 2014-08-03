@@ -1,1 +1,4 @@
-A QUOTE POST
+<div class="text">{{ post.text }}</div>
+<div class="source" ng-show="post.source">
+    —<span ng-bind-html="post.source"></span>
+</div>
