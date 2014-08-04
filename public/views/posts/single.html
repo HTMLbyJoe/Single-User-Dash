@@ -17,3 +17,5 @@
         <a class="reblog" target="_blank" ng-href="http://tumblr.com/reblog/{{ post.id }}/{{ post.reblog_key }}?redirect_to=%2Fdashboard">reblog</a>
     </div>
 </div>
+
+<a target="_blank" class="permalink" title="View post - {{ post.timestamp*1000 | date:'h:mma' | lowercase }}" ng-href="{{ post.post_url }}">View post</a>
