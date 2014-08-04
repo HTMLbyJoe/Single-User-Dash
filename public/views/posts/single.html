@@ -11,6 +11,9 @@
 </div>
 
 <div class="footer">
-    <a target="_blank" ng-href="{{ post.post_url }}#notes"><ng-pluralize count="post.note_count" when="{'0': '', 'one': '1 note', 'other': '{{post.note_count|number}} notes'}"></ng-pluralize></a>
-    <a target="_blank" ng-href="http://tumblr.com/reblog/{{ post.id }}/{{ post.reblog_key }}?redirect_to=%2Fdashboard">reblog</a>
+    <a class="notes" target="_blank" ng-href="{{ post.post_url }}#notes"><ng-pluralize count="post.note_count" when="{'0': '', 'one': '1 note', 'other': '{{post.note_count|number}} notes'}"></ng-pluralize></a>
+
+    <div class="controls">
+        <a class="reblog" target="_blank" ng-href="http://tumblr.com/reblog/{{ post.id }}/{{ post.reblog_key }}?redirect_to=%2Fdashboard">reblog</a>
+    </div>
 </div>
