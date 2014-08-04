@@ -49,7 +49,7 @@ app.filter('trusted', ['$sce', function($sce){
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
     $routeProvider.when('/:blogName/post?/:id/:slug?', {templateUrl: '/views/posts/list.html', controller: 'DashboardCtrl.permalink'});
-    $routeProvider.when('/:blogName/:id/:slug?', {templateUrl: '/views/posts/list.html', controller: 'DashboardCtrl.permalink'});
     $routeProvider.when('/:blogName/tagged/:tag', {templateUrl: '/views/posts/list.html', controller: 'DashboardCtrl.tag'});
+    $routeProvider.when('/:blogName/:id/:slug?', {templateUrl: '/views/posts/list.html', controller: 'DashboardCtrl.permalink'});
     $routeProvider.when('/:blogName', {templateUrl: '/views/posts/list.html', controller: 'DashboardCtrl'});
 }]);
