@@ -24,7 +24,7 @@ body {
 .posts > li {
     position: relative;
     background: #fff;
-    color: #000;
+    color: #444;
     font-size: 14px;
     background: #fff;
     padding: 15px 0 15px 0;
@@ -107,6 +107,10 @@ body {
     padding: 20px;
 }
 
+.posts > li .content a {
+    color: #444;
+}
+
 .posts > li:hover .permalink,
 .posts > li:focus .permalink {
     display: block;
@@ -135,6 +139,13 @@ body {
     border-left: 16px solid rgba(0, 0, 0, 0);
     border-bottom: 16px solid rgba(0, 0, 0, 0);
     -moz-transform: scale(.9999);
+}
+
+.posts > li blockquote {
+    margin: 10px 0 10px 10px;
+    padding-left: 15px;
+    border-left: solid 4px #dcdcdc;
+    border-left: solid 4px rgba(0, 0, 0, 0.12);
 }
 
 .posts > li img {
