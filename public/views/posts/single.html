@@ -10,6 +10,10 @@
     <div ng-include="'/views/posts/types/' + post.type + '.html'"></div>
 </div>
 
+<div class="tags" ng-show="post.tags">
+    <a ng-href="/{{ blogName }}/tagged/{{ tag }}" ng-repeat="tag in post.tags">#{{ tag }}</a>
+</div>
+
 <div class="footer">
     <a class="notes" target="_blank" ng-href="{{ post.post_url }}#notes"><ng-pluralize count="post.note_count" when="{'0': '', 'one': '1 note', 'other': '{{post.note_count|number}} notes'}"></ng-pluralize></a>
 

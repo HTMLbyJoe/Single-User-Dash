@@ -54,12 +54,15 @@ body {
 }
 
 .posts > li .header,
+.posts > li .tags,
 .posts > li .footer {
     padding: 0 20px;
+    padding-top: 20px;
     font-size: 13px;
 }
 
 .posts > li .header {
+    padding-top: 0;
     font-weight: bold;
 }
 
@@ -68,6 +71,7 @@ body {
 }
 
 .posts > li .header a,
+.posts > li .tags   a,
 .posts > li .footer a {
     text-decoration: none;
     color: #a7a7a7;
@@ -114,8 +118,10 @@ body {
 }
 
 .posts > li .header a:hover,
+.posts > li .tags   a:hover,
 .posts > li .footer a:hover,
 .posts > li .header a:focus,
+.posts > li .tags   a:focus,
 .posts > li .footer a:focus {
     color: #969696;
 }
@@ -128,10 +134,20 @@ body {
 
 .posts > li .content {
     padding: 20px;
+    padding-bottom: 0;
 }
 
 .posts > li .content a {
     color: #444;
+}
+
+.posts > li .tags {
+    padding-top: 0;
+}
+
+.posts > li .tags a {
+    margin-right: 1em;
+    text-decoration: none;
 }
 
 .posts > li:hover .permalink,
