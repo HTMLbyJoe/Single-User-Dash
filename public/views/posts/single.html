@@ -1,19 +1,16 @@
-<li ng-class="post.type + '-post'" ng-repeat="post in posts">
-
-    <div class="header">
-        {{ post.blog_name }} <span class="reblogged-from" ng-show="post.reblogged_from_name">reblogged <a target="_blank" ng-href="{{ post.reblogged_from_url }}">{{ post.reblogged_from_name }}</a></span>
-        <div class="source" ng-show="post.source_url">Source: <a target="_blank" ng-href="{{ post.source_url }}">{{ post.source_title }}</a></div>
-        <div class="timestamp">
-            <a ng-href="/{{ blogName }}/{{ post.id }}">{{ post.timestamp*1000 | date:'yyyy-MM-dd hh:mma' | lowercase }}</a>
-        </div>
+<div class="header">
+    {{ post.blog_name }} <span class="reblogged-from" ng-show="post.reblogged_from_name">reblogged <a target="_blank" ng-href="{{ post.reblogged_from_url }}">{{ post.reblogged_from_name }}</a></span>
+    <div class="source" ng-show="post.source_url">Source: <a target="_blank" ng-href="{{ post.source_url }}">{{ post.source_title }}</a></div>
+    <div class="timestamp">
+        <a ng-href="/{{ blogName }}/{{ post.id }}">{{ post.timestamp*1000 | date:'yyyy-MM-dd hh:mma' | lowercase }}</a>
     </div>
+</div>
 
-    <div class="content">
-        <div ng-include="'/views/posts/types/' + post.type + '.html'"></div>
-    </div>
+<div class="content">
+    <div ng-include="'/views/posts/types/' + post.type + '.html'"></div>
+</div>
 
-    <div class="footer">
-        <a target="_blank" ng-href="{{ post.post_url }}#notes"><ng-pluralize count="post.note_count" when="{'0': '', 'one': '1 note', 'other': '{{post.note_count|number}} notes'}"></ng-pluralize></a>
-        <a target="_blank" ng-href="http://tumblr.com/reblog/{{ post.id }}/{{ post.reblog_key }}?redirect_to=%2Fdashboard">reblog</a>
-    </div>
-</li>
+<div class="footer">
+    <a target="_blank" ng-href="{{ post.post_url }}#notes"><ng-pluralize count="post.note_count" when="{'0': '', 'one': '1 note', 'other': '{{post.note_count|number}} notes'}"></ng-pluralize></a>
+    <a target="_blank" ng-href="http://tumblr.com/reblog/{{ post.id }}/{{ post.reblog_key }}?redirect_to=%2Fdashboard">reblog</a>
+</div>
