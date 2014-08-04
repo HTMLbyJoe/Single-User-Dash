@@ -1,5 +1,5 @@
 <div class="header">
-    {{ post.blog_name }} <span class="reblogged-from" ng-show="post.reblogged_from_name">reblogged <a target="_blank" ng-href="{{ post.reblogged_from_url }}">{{ post.reblogged_from_name }}</a></span>
+    <a target="_blank" ng-href="{{ blog.url }}">{{ post.blog_name }}</a> <span class="reblogged-from" ng-show="post.reblogged_from_name"><span class="reblogged-icon">reblogged</span> <a target="_blank" ng-href="{{ post.reblogged_from_url }}">{{ post.reblogged_from_name }}</a></span>
     <div class="source" ng-show="post.source_url">Source: <a target="_blank" ng-href="{{ post.source_url }}">{{ post.source_title }}</a></div>
     <div class="timestamp">
         <a ng-href="/{{ blogName }}/{{ post.id }}">{{ post.timestamp*1000 | date:'yyyy-MM-dd hh:mma' | lowercase }}</a>
