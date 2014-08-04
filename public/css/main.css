@@ -4,11 +4,147 @@
 }
 
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif;
     font-size: 19px;
+    background-color: #2c4762;
+    color: #fff;
 }
 
 .page-wrap {
     margin: 0 auto;
     max-width: 725px;
+}
+
+.posts {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.posts > li {
+    position: relative;
+    background: #fff;
+    color: #000;
+    font-size: 14px;
+    background: #fff;
+    padding: 15px 0 15px 0;
+    word-wrap: break-word;
+    border-radius: 6px;
+    margin: 0 0 20px 0;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+.posts > li .header,
+.posts > li .footer {
+    padding: 0 20px;
+    font-size: 13px;
+}
+
+.posts > li .header {
+    font-weight: bold;
+}
+
+.posts > li .footer {
+    padding-bottom: 20px;
+}
+
+.posts > li .header a,
+.posts > li .footer a {
+    text-decoration: none;
+    color: #a7a7a7;
+}
+
+.posts > li .header .reblogged-icon,
+.posts > li .controls .reblog {
+    display: inline-block;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background: -397px -93px url('https://secure.assets.tumblr.com/images/dashboard_master_sprite.png?4b36f09873416562a93f7bc432d1ff0a') no-repeat;
+    opacity: 0.31;
+    vertical-align: -5px;
+    margin: 0 2px;
+}
+
+.posts > li .header .reblogged-icon {
+    height: 20px;
+    width: 20px;
+}
+
+.posts > li .controls .reblog {
+    height: 24px;
+    width: 24px;
+    background-position: -499px -268px;
+}
+
+.posts > li .footer .notes {
+    float: left;
+}
+
+.posts > li .footer .controls {
+    float: right;
+}
+
+.posts > li .footer a {
+    font-weight: bold;
+    margin-right: 2px;
+}
+
+.posts > li .header a:hover,
+.posts > li .footer a:hover,
+.posts > li .header a:focus,
+.posts > li .footer a:focus {
+    color: #969696;
+}
+
+.posts > li .source {
+    float: right;
+    color: #a7a7a7;
+}
+
+.posts > li .content {
+    padding: 20px;
+}
+
+.posts > li:hover .permalink,
+.posts > li:focus .permalink {
+    display: block;
+}
+
+.posts > li .permalink {
+    display: none;
+    position: absolute;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    background: #cecfd1;
+    border-bottom-left-radius: 6px;
+}
+
+.posts > li .permalink:before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    border-right: 16px solid #2C4762;
+    border-left: 16px solid rgba(0, 0, 0, 0);
+    border-bottom: 16px solid rgba(0, 0, 0, 0);
+    -moz-transform: scale(.9999);
+}
+
+.posts > li img {
+    max-width: 100%;
+}
+
+.posts > li .photos img {
+    width: 100%;
+}
+
+.posts > li iframe {
+    width: 100%;
 }
