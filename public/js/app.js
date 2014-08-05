@@ -1,18 +1,16 @@
-var app = angular.module('singleUserDash', ['ngRoute', 'ngResource', 'ngSanitize', 'singleUserDash.services']);
+var app = angular.module('singleUserDash', ['ngRoute', 'ngResource', 'ngSanitize', 'infinite-scroll', 'singleUserDash.services']);
 
-app.controller('DashboardCtrl', ['$scope', '$routeParams', 'Blog', function($scope, $routeParams, Blog){
+app.controller('DashboardCtrl', ['$scope', '$routeParams', 'PostsPager', function($scope, $routeParams, PostsPager){
     var dash = this;
 
-    var blogName = $routeParams.blogName;
+    var blogName    = $routeParams.blogName;
     $scope.blogName = blogName;
 
-    Blog.query({blogName: blogName}, function(response){
-        $scope.posts = response.posts;
-        $scope.blog  = response.blog;
-    });
+    var params   = {blogName: blogName};
+    $scope.pager = new PostsPager(params);
 }]);
 
-app.controller('DashboardCtrl.tag', ['$scope', '$routeParams', 'Blog', function($scope, $routeParams, Blog){
+app.controller('DashboardCtrl.tag', ['$scope', '$routeParams', 'PostsPager', function($scope, $routeParams, PostsPager){
     var dash = this;
 
     var blogName    = $routeParams.blogName,
@@ -20,13 +18,11 @@ app.controller('DashboardCtrl.tag', ['$scope', '$routeParams', 'Blog', function(
     $scope.blogName = blogName;
     $scope.tag      = tag;
 
-    Blog.query({blogName: blogName, tag: tag}, function(response){
-        $scope.posts = response.posts;
-        $scope.blog  = response.blog;
-    });
+    var params   = {blogName: blogName, tag: tag};
+    $scope.pager = new PostsPager(params);
 }]);
 
-app.controller('DashboardCtrl.permalink', ['$scope', '$routeParams', 'Blog', function($scope, $routeParams, Blog){
+app.controller('DashboardCtrl.permalink', ['$scope', '$routeParams', 'PostsPager', function($scope, $routeParams, PostsPager){
     var dash = this;
 
     var blogName    = $routeParams.blogName,
@@ -34,10 +30,8 @@ app.controller('DashboardCtrl.permalink', ['$scope', '$routeParams', 'Blog', fun
     $scope.blogName = blogName;
     $scope.postId   = postId;
 
-    Blog.query({blogName: blogName, id: postId}, function(response){
-        $scope.posts = response.posts;
-        $scope.blog  = response.blog;
-    });
+    var params   = {blogName: blogName, id: postId};
+    $scope.pager = new PostsPager(params);
 }]);
 
 app.filter('trusted', ['$sce', function($sce){

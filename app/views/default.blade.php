@@ -12,10 +12,12 @@
         <div ng-view></div>
     </div>
 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-route.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-resource.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-sanitize.min.js"></script>
+    <script type="text/JavaScript" src="/lib/ng-infinite-scroll.min.js"></script>
     <script type="text/JavaScript" src="/js/services.js"></script>
     <script type="text/JavaScript" src="/js/app.js"></script>
 </body>

@@ -1,8 +1,8 @@
 <header>
-    <h1 class="title"><img class="avatar" alt="" ng-src="//api.tumblr.com/v2/blog/{{ blog.name }}.tumblr.com/avatar/64">{{ blog.title }}</h1>
-    <div class="description" ng-bind-html="blog.description"></div>
+    <h1 class="title"><img class="avatar" alt="" ng-src="//api.tumblr.com/v2/blog/{{ pager.blog.name }}.tumblr.com/avatar/64">{{ pager.blog.title }}</h1>
+    <div class="description" ng-bind-html="pager.blog.description"></div>
 </header>
 
-<ol class="posts">
-    <li ng-include="'/views/posts/single.html'" ng-class="post.type + '-post'" ng-repeat="post in posts"></li>
+<ol class="posts" infinite-scroll="pager.nextPage()" infinite-scroll-disabled="pager.busy" infinite-scroll-distance="1">
+    <li ng-include="'/views/posts/single.html'" ng-class="post.type + '-post'" ng-repeat="post in pager.posts"></li>
 </ol>
