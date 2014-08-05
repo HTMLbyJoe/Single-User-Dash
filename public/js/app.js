@@ -15,6 +15,26 @@ app.filter('trusted', ['$sce', function($sce){
     };
 }]);
 
+app.filter('quoteClass', [function(){
+    return function(text) {
+        var className = 'extra-large';
+
+        var breakpoints = [
+            {className: 'large',  size: 20},
+            {className: 'medium', size: 81},
+            {className: 'small',  size: 300}
+        ];
+
+        breakpoints.forEach(function(point){
+            if (text.length >= point.size) {
+                className = point.className;
+            }
+        });
+
+        return className;
+    };
+}]);
+
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
     $routeProvider.when('/:blogName/post?/:id/:slug?', {templateUrl: '/views/posts/list.html', controller: 'DashboardCtrl'});
