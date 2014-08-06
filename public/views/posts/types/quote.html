@@ -1,4 +1,4 @@
-<div class="text" ng-class="post.text|quoteClass" ng-bind-html="post.text"></div>
+<span class="text" ng-class="post.text|quoteClass" ng-bind-html="'“' + post.text + '”'"></span>
 <div class="source" ng-show="post.source">
-    —<span ng-bind-html="post.source"></span>
+    <span class="separator">—</span><span ng-bind-html="post.source"></span>
 </div>
