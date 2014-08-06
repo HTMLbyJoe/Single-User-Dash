@@ -1,10 +1,19 @@
-<div class="question">{{ post.question }}</div>
+<div class="question">
+    <div class="text">
+        <p class="asker">
+            <a target="_blank" ng-show="post.asking_name != 'Anonymous'" ng-href="{{ post.asking_url }}">{{ post.asking_name }}</a>
+            <span ng-show="post.asking_name == 'Anonymous'">{{ post.asking_name }}</span>
+             said:
+        </p>
+        {{ post.question }}
+    </div>
+    <div class="nipple"></div>
+</div>
 
-<div class="asking">
+<div class="asking-avatar">
     <a target="_blank" ng-show="post.asking_name != 'Anonymous'" ng-href="{{ post.asking_url }}">
         <img alt="" ng-src="//api.tumblr.com/v2/blog/{{ post.asking_name }}.tumblr.com/avatar/40">
     </a>
-
     <img alt="" ng-show="post.asking_name == 'Anonymous'" ng-src="//assets.tumblr.com/images/anonymous_avatar_40.png">
 </div>
 
