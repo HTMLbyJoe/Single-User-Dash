@@ -249,6 +249,71 @@ body {
     font-weight: bold;
 }
 
+.posts > li.link-post .url {
+    display: block;
+    color: #fff;
+    min-height: 130px;
+    line-height: 4;
+    border-radius: 3px;
+    border: 1px solid #56bc8a;
+    background-color: #56bc8a;
+    text-decoration: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    opacity: 1;
+    -webkit-transition: opacity .25s linear;
+    -moz-transition: opacity .25s linear;
+    -ms-transition: opacity .25s linear;
+    -o-transition: opacity .25s linear;
+    transition: opacity .25s linear;
+}
+
+.posts > li.link-post .url .title {
+    display: block;
+    font-size: 19px;
+    font-weight: bold;
+    overflow: visible;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.posts > li.link-post .url.has-image .title {
+    max-width: 555px;
+}
+
+.posts > li.link-post .url .title:after {
+    display: inline;
+    padding-left: 7px;
+    vertical-align: 1px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    speak: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: '⟩';
+}
+
+.posts > li.link-post .url .hostname {
+    font-size: 12px;
+    line-height: 1.2;
+    color: rgba(255, 255, 255, 0.7);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.posts > li.link-post .url img {
+    position: relative;
+    float: right;
+    width: 130px;
+    height: 130px;
+    margin: -1px;
+}
+
 .posts > li .photos img {
     width: 100%;
 }

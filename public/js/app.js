@@ -35,6 +35,12 @@ app.filter('quoteClass', [function(){
     };
 }]);
 
+app.filter('parseUrlHostname', [function(){
+    return function(url) {
+        return url.split('/')[2];
+    };
+}]);
+
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
     $routeProvider.when('/:blogName/post?/:id/:slug?', {templateUrl: '/views/posts/list.html', controller: 'DashboardCtrl'});

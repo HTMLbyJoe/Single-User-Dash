@@ -1,2 +1,6 @@
-<a class="url" target="_blank" ng-href="{{ post.url }}"><span class="title">{{ post.title }}</span><img alt="" ng-show="post.link_image" ng-src="{{ post.link_image }}"></a>
+<a class="url" target="_blank" ng-href="{{ post.url }}" ng-class="(post.link_image) ? 'has-image':'no-image'">
+    <img alt="" ng-show="post.link_image" ng-src="{{ post.link_image }}">
+    <span class="title">{{ post.title }}</span>
+    <div class="hostname">{{ post.url | parseUrlHostname }}</div>
+</a>
 <div class="description" ng-bind-html="post.description"></div>
