@@ -233,6 +233,10 @@ body {
     padding: 6px 0;
 }
 
+.posts > li.chat-post .line:nth-child(even) {
+    background: #fdfdfd;
+}
+
 .posts > li.chat-post .line:first-child {
     padding-top: 0;
 }
