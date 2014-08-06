@@ -228,6 +228,23 @@ body {
     display: inline;
 }
 
+.posts > li.chat-post .line {
+    font: normal 14px/1.4 Courier,monospace;
+    padding: 6px 0;
+}
+
+.posts > li.chat-post .line:first-child {
+    padding-top: 0;
+}
+
+.posts > li.chat-post .line:last-child {
+    padding-bottom: 0;
+}
+
+.posts > li.chat-post .line .label {
+    font-weight: bold;
+}
+
 .posts > li .photos img {
     width: 100%;
 }
