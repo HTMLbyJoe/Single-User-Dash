@@ -7,7 +7,7 @@ function($resource){
     });
 }]);
 
-singleUserDashServices.factory('PostsPager', ['$http', 'Blog', function($http, Blog) {
+singleUserDashServices.factory('PostsPager', ['$rootScope', '$http', 'Blog', function($rootScope, $http, Blog) {
   var PostsPager = function(params) {
     this.posts     = [];
     this.busy      = false;
@@ -32,6 +32,7 @@ singleUserDashServices.factory('PostsPager', ['$http', 'Blog', function($http, B
     Blog.query(params, function(response){
         var posts = response.posts;
         this.blog = response.blog;
+        $rootScope.blog = this.blog;
 
         if (this.posts.length && posts.length && this.posts[this.posts.length - 1].id == posts[0].id) {
             return false;
