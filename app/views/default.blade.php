@@ -23,6 +23,7 @@
     <script type="text/JavaScript" src="/lib/ng-infinite-scroll.min.js"></script>
     <script type="text/JavaScript" src="/js/services.js"></script>
     <script type="text/JavaScript" src="/js/app.js"></script>
+    <% $analytics %>
 </body>
 </html>
 <!--

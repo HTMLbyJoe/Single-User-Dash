@@ -13,7 +13,5 @@
 
 Route::get('/blog/{blogName}/posts', 'PostsController@index');
 
-Route::any('{blogName?}', function()
-{
-    return View::make('default');
-})->where('blogName', '([A-z\d-\/_.]+)?');
+Route::any('{blogName?}', 'SiteController@main')
+    ->where('blogName', '([A-z\d-\/_.]+)?');
