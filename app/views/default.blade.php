@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="/css/main.css">
     <title ng-if="!blog.name">Single User Dash</title>
     <title ng-if="blog.name">{{ blog.name }} - Single User Dash</title>
-    <link rel="shortcut icon" href="http://api.tumblr.com/v2/blog/{{ blog.name }}.tumblr.com/avatar/16">
-    <link rel="apple-touch-icon" href="http://api.tumblr.com/v2/blog/{{ blog.name }}.tumblr.com/avatar/128">
+    <link rel="shortcut icon" href="https://api.tumblr.com/v2/blog/{{ blog.name }}.tumblr.com/avatar/16">
+    <link rel="apple-touch-icon" href="https://api.tumblr.com/v2/blog/{{ blog.name }}.tumblr.com/avatar/128">
 </head>
 <body>
 
